@@ -1,0 +1,32 @@
+import telebot
+
+
+TOKEN= ''
+bot= telebot.TeleBot(TOKEN)
+
+
+@bot.message_handler(commands=['start'])
+def say_hello(message):
+    bot.send_message(message.chat.id,'Привет хорошего дня!')   
+
+
+
+@bot.message_handler(commands=['help'])
+def say_hello(message):
+    bot.send_message(message.chat.id,'чем тебе помочь?')   
+
+
+
+@bot.message_handler(content_types=['text'])
+def handle_message(message):
+    txt=(
+        "Я - тестовый бот. Используйте меня для решеня задач на проверку"
+    )
+    bot.send_message(message.chat.id, txt)
+
+
+print('Good)')
+bot.polling(
+    none_stop=True,
+    interval=1
+)
