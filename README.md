@@ -6,7 +6,7 @@ from telegram.ext import Application, CommandHandler, ContextTypes, CallbackQuer
 from sqlalchemy import create_engine, Column, Integer, String, DateTime, Float, ForeignKey, func
 from sqlalchemy.orm import declarative_base, sessionmaker, relationship
 
-BOT_TOKEN = "8455342253:AAGWPJvGe9LHTXCD2yGTtp9FJ6fBBOhSjwY"
+BOT_TOKEN = ""
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
